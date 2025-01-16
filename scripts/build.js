@@ -8,6 +8,10 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const entryPoints = {
   index: join(__dirname, '../src/index.ts'),
   button: join(__dirname, '../src/button/define.ts'),
+  input: join(__dirname, '../src/input/define.ts'),
+  select: join(__dirname, '../src/select/define.ts'),
+  spinner: join(__dirname, '../src/spinner/define.ts'),
+  switch: join(__dirname, '../src/switch/define.ts'),
 };
 const outdir = join(__dirname, '../dist');
 
