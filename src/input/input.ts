@@ -1,7 +1,7 @@
 import { FASTElement, attr } from '@microsoft/fast-element';
 
 export class Input extends FASTElement {
-  @attr type: string = 'text';
+  @attr type: string = '';
   @attr placeholder: string = '';
   value: string = '';
 
