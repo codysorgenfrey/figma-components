@@ -12,6 +12,7 @@ const entryPoints = {
   select: join(__dirname, '../src/select/define.ts'),
   spinner: join(__dirname, '../src/spinner/define.ts'),
   switch: join(__dirname, '../src/switch/define.ts'),
+  'theme-provider': join(__dirname, '../src/theme-provider/define.ts'),
 };
 const outdir = join(__dirname, '../dist');
 
