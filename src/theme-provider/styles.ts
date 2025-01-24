@@ -2,6 +2,19 @@ import { css } from '@microsoft/fast-element';
 
 export const styles = css`
   :host {
+    color: var(--figma-color-text);
+    background-color: var(--figma-color-bg);
+    font-family: var(--figma-font-family-default);
+    font-size: var(--figma-font-size-default);
+    font-weight: var(--figma-font-weight-default);
+
+    /* Added myself */
+    --figma-font-size-default: 11px;
+    --figma-font-size-large: 13px;
+    --figma-font-weight-default: medium;
+    --figma-font-family-default: Inter, sans-serif;
+
+    /* From Figma */
     --figma-color-bg: #ffffff;
     --figma-color-bg-brand: #0d99ff;
     --figma-color-bg-brand-hover: #007be5;
