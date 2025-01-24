@@ -4,7 +4,7 @@ A set of reusable web components for figma plugins.
 
 ## Usage
 
-Be sure to call `figma.showUI()` with the option `{ themeColors: true }`.
+Use anywhere standard web components can be used. Bundled theming works for figma UIs hosted on external servers.
 
 ### Installation
 
