@@ -2,12 +2,6 @@ import { css } from '@microsoft/fast-element';
 
 export const styles = css`
   :host {
-    color: var(--figma-color-text);
-    background-color: var(--figma-color-bg);
-    font-family: var(--figma-font-family-default);
-    font-size: var(--figma-font-size-default);
-    font-weight: var(--figma-font-weight-default);
-
     /* Added myself */
     --figma-font-size-default: 11px;
     --figma-font-size-large: 13px;
@@ -188,6 +182,16 @@ export const styles = css`
     --figma-color-text-warning: #b86200;
     --figma-color-text-warning-secondary: #b86200;
     --figma-color-text-warning-tertiary: #b86200;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--figma-color-bg);
+    color: var(--figma-color-text);
+    background-color: var(--figma-color-bg);
+    font-family: var(--figma-font-family-default);
+    font-size: var(--figma-font-size-default);
+    font-weight: var(--figma-font-weight-default);
   }
 
   @media (prefers-color-scheme: dark) {
