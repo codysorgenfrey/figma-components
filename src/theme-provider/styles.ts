@@ -11,7 +11,8 @@ export const styles = css`
     /* Added myself */
     --figma-font-size-default: 11px;
     --figma-font-size-large: 13px;
-    --figma-font-weight-default: medium;
+    --figma-font-weight-default: 400;
+    --figma-font-weight-strong: 600;
     --figma-font-family-default: Inter, sans-serif;
 
     /* From Figma */
