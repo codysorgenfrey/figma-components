@@ -1,6 +1,7 @@
-import { FASTElement, observable } from '@microsoft/fast-element';
+import { attr, FASTElement, observable } from '@microsoft/fast-element';
 
 export class Select extends FASTElement {
+  @attr({ mode: 'boolean' }) disabled = false;
   #selectEl?: HTMLSelectElement;
   @observable slottedNodes!: Node[];
 

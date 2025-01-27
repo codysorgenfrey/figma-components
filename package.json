@@ -1,6 +1,6 @@
 {
   "name": "@codysorgenfrey/figma-components",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Web components for Figma plugins",
   "type": "module",
   "repository": {

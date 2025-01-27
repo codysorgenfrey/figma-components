@@ -33,6 +33,13 @@ export const styles = css`
     }
   }
 
+  select[disabled] {
+    background: var(--figma-color-bg-disabled);
+    color: var(--figma-color-text-disabled);
+    border: 1px solid var(--figma-color-border-disabled);
+    cursor: not-allowed;
+  }
+
   slot {
     display: none;
   }
