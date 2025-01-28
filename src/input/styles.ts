@@ -1,11 +1,18 @@
 import { css } from '@microsoft/fast-element';
 
 export const styles = css`
+  :host {
+    display: inline-block;
+    box-sizing: border-box;
+    min-width: 128px;
+    height: 24px;
+  }
+
   input {
     box-sizing: border-box;
     flex: 1;
-    min-width: 128px;
-    height: 24px;
+    width: 100%;
+    height: 100%;
     border: 1px solid transparent;
     border-radius: 4px;
     background: var(--figma-color-bg-secondary);

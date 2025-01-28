@@ -1,10 +1,9 @@
 {
   "compilerOptions": {
     "strict": true,
-    "target": "ESNext",
-    "moduleResolution": "nodenext",
-    "module": "NodeNext",
-    "lib": ["ESNext", "DOM"],
+    "target": "ES6",
+    "moduleResolution": "bundler",
+    "lib": ["ES6", "DOM"],
     "experimentalDecorators": true,
     "importHelpers": true,
     "forceConsistentCasingInFileNames": true,
@@ -13,7 +12,6 @@
     "jsx": "react",
     "allowJs": false,
     "declaration": true,
-    "sourceMap": true,
     "emitDeclarationOnly": true,
     "declarationDir": "dist/types"
   },
