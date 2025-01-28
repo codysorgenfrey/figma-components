@@ -1,6 +1,6 @@
 {
   "name": "@codysorgenfrey/figma-components",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Web components for Figma plugins",
   "type": "module",
   "repository": {
@@ -44,7 +44,8 @@
     "./package.json": "./package.json"
   },
   "files": [
-    "dist/"
+    "dist",
+    "package.json"
   ],
   "scripts": {
     "build": "npm run clean && npm run compile && node ./scripts/build.js",
@@ -52,6 +53,11 @@
     "clean": "rimraf dist",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
   },
   "peerDependencies": {
     "@microsoft/fast-element": "^2.0.1"
@@ -75,10 +81,5 @@
     "tslib": "^2.8.1",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.20.0"
-  },
-  "eslintConfig": {
-    "extends": [
-      "plugin:storybook/recommended"
-    ]
   }
 }

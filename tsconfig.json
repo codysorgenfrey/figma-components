@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "strict": true,
-    "target": "ES6",
+    "target": "ES6", // Needed for @observable
     "moduleResolution": "bundler",
     "lib": ["ES6", "DOM"],
     "experimentalDecorators": true,
@@ -9,12 +9,13 @@
     "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
-    "jsx": "react",
-    "allowJs": false,
+    "jsx": "react", // Needed for storybook
+    "allowJs": false, // Needed for storybook
     "declaration": true,
     "emitDeclarationOnly": true,
-    "declarationDir": "dist/types"
+    "declarationDir": "dist/types",
+    "rootDir": "src" // Needed for proper type generation
   },
   "include": ["src"],
-  "exclude": ["*.stories.ts"]
+  "exclude": ["**/*.stories.ts"]
 }
