@@ -35,7 +35,6 @@ export class Select extends FASTElement {
   handleSelectChange = (e: Event) => {
     const target = e.target as HTMLSelectElement;
     this.selectedIndex = target.selectedIndex;
-    console.log('Selected index:', this.selectedIndex);
     this.$emit('change', e);
   };
 }
