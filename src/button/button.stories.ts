@@ -4,8 +4,8 @@ import {
   type StoryArgs,
   type Meta,
   type StoryObj,
-} from '../../.storybook/helpers';
-import { Button } from './button';
+} from '../../.storybook/helpers.js';
+import { Button } from './button.js';
 import './define';
 
 const template = html<StoryArgs>`<figma-button

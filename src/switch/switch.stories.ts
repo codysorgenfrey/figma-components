@@ -3,8 +3,8 @@ import {
   type StoryArgs,
   type Meta,
   type StoryObj,
-} from '../../.storybook/helpers';
-import { Switch } from './switch';
+} from '../../.storybook/helpers.js';
+import { Switch } from './switch.js';
 import './define';
 import { html } from '@microsoft/fast-element';
 import { fn } from '@storybook/test';

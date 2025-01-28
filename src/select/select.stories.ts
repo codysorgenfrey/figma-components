@@ -3,9 +3,9 @@ import {
   type StoryArgs,
   type Meta,
   type StoryObj,
-} from '../../.storybook/helpers';
+} from '../../.storybook/helpers.js';
 import { fn } from '@storybook/test';
-import { Select } from './select';
+import { Select } from './select.js';
 import './define';
 import { html } from '@microsoft/fast-element';
 

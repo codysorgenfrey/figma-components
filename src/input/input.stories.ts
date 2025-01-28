@@ -3,8 +3,8 @@ import {
   type StoryArgs,
   type Meta,
   type StoryObj,
-} from '../../.storybook/helpers';
-import { Input } from './input';
+} from '../../.storybook/helpers.js';
+import { Input } from './input.js';
 import './define';
 import { html } from '@microsoft/fast-element';
 import { fn } from '@storybook/test';
