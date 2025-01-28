@@ -1,27 +1,29 @@
-import {
-  renderComponent,
-  type StoryArgs,
-  type Meta,
-  type StoryObj,
-} from '../helpers';
-import { html } from '@microsoft/fast-element';
-import { Button } from './button';
+import type { Args, Meta, StoryObj } from '@storybook/html';
+import { Button, ButtonAppearance } from './button';
 import './define';
 
-const storyTemplate = html<StoryArgs<Button>>`<figma-button
-  appearance="${(x) => x.appearance}"
-  ?disabled="${(x) => x.disabled}"
-  >Button</figma-button
+const render = (args: Args) => /* html */ `<figma-button
+  appearance="${args.appearance}"
+  ${args.disabled ? 'disabled' : ''}
+  >
+  Button
+  </figma-button
 >`;
 
 const meta = {
   title: 'Components/Button',
   tags: ['autodocs'],
-  render: renderComponent(storyTemplate),
+  render,
   argTypes: {
     disabled: { control: 'boolean' },
+    appearance: {
+      control: {
+        type: 'inline-radio',
+        options: Object.keys(ButtonAppearance),
+      },
+    },
   },
-} as Meta<Button>;
+} as Meta;
 
 export default meta;
 type Story = StoryObj<Button>;

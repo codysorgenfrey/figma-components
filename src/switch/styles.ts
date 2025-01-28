@@ -55,7 +55,7 @@ export const styles = css`
     width: calc(var(--switch-height) - var(--switch-padding) * 2);
     height: calc(var(--switch-height) - var(--switch-padding) * 2);
     border-radius: 1000px;
-    background-color: var(--figma-color-bg);
+    background-color: var(--figma-color-icon-oncomponent);
     transition: transform 0.2s;
   }
 

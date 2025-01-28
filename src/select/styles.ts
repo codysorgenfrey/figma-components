@@ -4,7 +4,7 @@ export const styles = css`
   select {
     box-sizing: border-box;
     flex: 1;
-    width: 100%;
+    min-width: 128px;
     height: 24px;
     border: 1px solid var(--figma-color-border);
     border-radius: 4px;

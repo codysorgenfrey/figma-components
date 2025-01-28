@@ -2,7 +2,7 @@ import { FASTElement, attr } from '@microsoft/fast-element';
 
 export const ButtonAppearance = {
   primary: 'primary',
-};
+} as const;
 
 export type ButtonAppearance = keyof typeof ButtonAppearance;
 
