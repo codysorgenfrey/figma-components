@@ -9,5 +9,6 @@
     "emitDeclarationOnly": true,
     "declarationDir": "dist/types"
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["*.stories.ts"]
 }

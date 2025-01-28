@@ -32,4 +32,10 @@ export const styles = css`
       outline: none;
     }
   }
+
+  :host([disabled]) input {
+    background: var(--figma-color-bg-tertiary);
+    color: var(--figma-color-text-tertiary);
+    cursor: not-allowed;
+  }
 `;

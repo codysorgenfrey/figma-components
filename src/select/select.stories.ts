@@ -3,7 +3,7 @@ import {
   type StoryArgs,
   type Meta,
   type StoryObj,
-} from '../helpers';
+} from '../../.storybook/helpers';
 import { fn } from '@storybook/test';
 import { Select } from './select';
 import './define';

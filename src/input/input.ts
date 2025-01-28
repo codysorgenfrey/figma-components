@@ -3,6 +3,7 @@ import { FASTElement, attr } from '@microsoft/fast-element';
 export class Input extends FASTElement {
   @attr type: string = '';
   @attr placeholder: string = '';
+  @attr({ mode: 'boolean' }) disabled: boolean = false;
   value: string = '';
 
   handleInputKeyUp = (e: KeyboardEvent) => {

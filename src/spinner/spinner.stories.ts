@@ -3,7 +3,7 @@ import {
   type StoryArgs,
   type Meta,
   type StoryObj,
-} from '../helpers';
+} from '../../.storybook/helpers';
 import { Spinner } from './spinner';
 import './define';
 import { html } from '@microsoft/fast-element';

@@ -7,4 +7,5 @@ export const template = html<Input>` <input
   part="control"
   @change="${(x, c) => x.handleInputChange(c.event)}"
   @keyup="${(x, c) => x.handleInputKeyUp(c.event as KeyboardEvent)}"
+  ?disabled="${(x) => x.disabled}"
 />`;

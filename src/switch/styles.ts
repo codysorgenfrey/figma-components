@@ -62,4 +62,16 @@ export const styles = css`
   :host([checked]) .indicator {
     transform: translateX(var(--switch-height));
   }
+
+  :host([disabled]) {
+    cursor: not-allowed;
+  }
+
+  :host([disabled]) .container {
+    background-color: var(--figma-color-bg-disabled);
+  }
+
+  :host([disabled]) .indicator {
+    background-color: var(--figma-color-icon-disabled);
+  }
 `;

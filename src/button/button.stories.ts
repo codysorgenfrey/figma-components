@@ -4,8 +4,8 @@ import {
   type StoryArgs,
   type Meta,
   type StoryObj,
-} from '../helpers';
-import { Button, ButtonAppearance } from './button';
+} from '../../.storybook/helpers';
+import { Button } from './button';
 import './define';
 
 const template = html<StoryArgs>`<figma-button
@@ -22,10 +22,8 @@ export default {
   argTypes: {
     disabled: { control: 'boolean' },
     appearance: {
-      control: {
-        type: 'inline-radio',
-        options: Object.keys(ButtonAppearance),
-      },
+      control: 'radio',
+      options: ['primary'],
     },
   },
 } as Meta<Button>;
