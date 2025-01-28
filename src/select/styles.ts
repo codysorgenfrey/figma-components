@@ -1,11 +1,18 @@
 import { css } from '@microsoft/fast-element';
 
 export const styles = css`
+  :host {
+    box-sizing: border-box;
+    display: inline-block;
+    min-width: 128px;
+    height: 24px;
+  }
+
   select {
     box-sizing: border-box;
     flex: 1;
-    min-width: 128px;
-    height: 24px;
+    width: 100%;
+    height: 100%;
     border: 1px solid var(--figma-color-border);
     border-radius: 4px;
     background: var(--figma-color-bg);
@@ -33,14 +40,14 @@ export const styles = css`
     }
   }
 
-  select[disabled] {
+  slot {
+    display: none;
+  }
+
+  :host([disabled]) select {
     background: var(--figma-color-bg-disabled);
     color: var(--figma-color-text-disabled);
     border: 1px solid var(--figma-color-border-disabled);
     cursor: not-allowed;
-  }
-
-  slot {
-    display: none;
   }
 `;

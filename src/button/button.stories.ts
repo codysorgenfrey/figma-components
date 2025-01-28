@@ -7,10 +7,12 @@ import {
 } from '../../.storybook/helpers.js';
 import { Button } from './button.js';
 import './define';
+import { fn } from '@storybook/test';
 
 const template = html<StoryArgs>`<figma-button
   appearance="${(x) => x.appearance}"
   ?disabled="${(x) => x.disabled}"
+  @click="${(x, c) => x.onClick(c.event)}"
 >
   Button
 </figma-button>`;
@@ -25,6 +27,9 @@ export default {
       control: 'radio',
       options: ['primary'],
     },
+  },
+  args: {
+    onClick: fn(),
   },
 } as Meta<Button>;
 
