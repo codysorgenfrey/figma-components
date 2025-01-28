@@ -1,19 +1,24 @@
-import type { Args, Meta, StoryObj } from '@storybook/html';
+import { html } from '@microsoft/fast-element';
+import {
+  renderComponent,
+  type StoryArgs,
+  type Meta,
+  type StoryObj,
+} from '../helpers';
 import { Button, ButtonAppearance } from './button';
 import './define';
 
-const render = (args: Args) => /* html */ `<figma-button
-  appearance="${args.appearance}"
-  ${args.disabled ? 'disabled' : ''}
-  >
+const template = html<StoryArgs>`<figma-button
+  appearance="${(x) => x.appearance}"
+  ?disabled="${(x) => x.disabled}"
+>
   Button
-  </figma-button
->`;
+</figma-button>`;
 
-const meta = {
+export default {
   title: 'Components/Button',
   tags: ['autodocs'],
-  render,
+  render: renderComponent(template),
   argTypes: {
     disabled: { control: 'boolean' },
     appearance: {
@@ -23,9 +28,8 @@ const meta = {
       },
     },
   },
-} as Meta;
+} as Meta<Button>;
 
-export default meta;
 type Story = StoryObj<Button>;
 
 export const Default: Story = {};

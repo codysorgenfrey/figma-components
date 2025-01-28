@@ -1,18 +1,22 @@
-import type { Meta, StoryObj } from '@storybook/html';
+import {
+  renderComponent,
+  type StoryArgs,
+  type Meta,
+  type StoryObj,
+} from '../helpers';
 import { Spinner } from './spinner';
 import './define';
+import { html } from '@microsoft/fast-element';
 
-const render = () => /* html */ `<figma-spinner></figma-spinner>
-`;
+const template = html<StoryArgs>`<figma-spinner></figma-spinner> `;
 
-const meta = {
+export default {
   title: 'Components/Spinner',
   tags: ['autodocs'],
-  render,
+  render: renderComponent(template),
   argTypes: {},
-} as Meta;
+} as Meta<Spinner>;
 
-export default meta;
 type Story = StoryObj<Spinner>;
 
 export const Default: Story = {};

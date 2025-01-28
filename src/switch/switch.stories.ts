@@ -1,18 +1,22 @@
-import type { Meta, StoryObj } from '@storybook/html';
+import {
+  renderComponent,
+  type StoryArgs,
+  type Meta,
+  type StoryObj,
+} from '../helpers';
 import { Switch } from './switch';
 import './define';
+import { html } from '@microsoft/fast-element';
 
-const render = () => /* html */ `<figma-switch></figma-switch>
-`;
+const template = html<StoryArgs>`<figma-switch></figma-switch> `;
 
-const meta = {
+export default {
   title: 'Components/Switch',
   tags: ['autodocs'],
-  render,
+  render: renderComponent(template),
   argTypes: {},
-} as Meta;
+} as Meta<Switch>;
 
-export default meta;
 type Story = StoryObj<Switch>;
 
 export const Default: Story = {};

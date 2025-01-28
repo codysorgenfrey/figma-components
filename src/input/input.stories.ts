@@ -1,18 +1,23 @@
-import type { Args, Meta, StoryObj } from '@storybook/html';
+import {
+  renderComponent,
+  type StoryArgs,
+  type Meta,
+  type StoryObj,
+} from '../helpers';
 import { Input } from './input';
 import './define';
+import { html } from '@microsoft/fast-element';
 
-const render = (args: Args) => /* html */ `<figma-input
-  ${args.disabled ? 'disabled' : ''}
-  type="${args.type}"
-  placeholder="${args.placeholder}"
-  ></figma-input>
-`;
+const template = html<StoryArgs>`<figma-input
+  ?disabled="${(x) => x.disabled}"
+  type="${(x) => x.type}"
+  placeholder="${(x) => x.placeholder}"
+></figma-input> `;
 
-const meta = {
+export default {
   title: 'Components/Input',
   tags: ['autodocs'],
-  render,
+  render: renderComponent(template),
   argTypes: {
     disabled: { control: 'boolean' },
     placeholder: { control: 'text' },
@@ -21,9 +26,8 @@ const meta = {
       options: ['text', 'password', 'email', 'number'],
     },
   },
-} as Meta;
+} as Meta<Input>;
 
-export default meta;
 type Story = StoryObj<Input>;
 
 export const Default: Story = {};
