@@ -7,9 +7,10 @@ export const styles = css`
     border-radius: 4px;
     background: var(--figma-color-bg);
     color: var(--figma-color-text);
-    font-size: 11px;
-    font-weight: medium;
-    padding: 10px 12px;
+    font-size: var(--figma-font-size-default);
+    line-height: 16px;
+    font-weight: var(--figma-font-weight-default);
+    padding: 7px 11px; /* Adjust padding for stroke */
     cursor: pointer;
     align-self: flex-end;
 
@@ -17,7 +18,7 @@ export const styles = css`
       background: var(--figma-color-bg-hover);
     }
 
-    &:active {
+    &:hover:active {
       background: var(--figma-color-bg-pressed);
     }
 
@@ -36,8 +37,21 @@ export const styles = css`
       background: var(--figma-color-bg-brand-hover);
     }
 
-    &:active {
+    &:hover:active {
       background: var(--figma-color-bg-brand-pressed);
+    }
+  }
+
+  :host([appearance='subtle']) button {
+    background: transparent;
+    border-color: transparent;
+
+    &:hover {
+      background: var(--figma-color-bg-hover);
+    }
+
+    &:hover:active {
+      background: var(--figma-color-bg-tertiary);
     }
   }
 
@@ -55,8 +69,16 @@ export const styles = css`
     }
   }
 
+  :host([size='small']) button {
+    padding: 3px 7px; /* Adjust padding for stroke */
+  }
+
   :host([icon-only]) button {
     line-height: 0;
     padding: 5px; /* Adjust padding for stroke */
+  }
+
+  :host([size='small'][icon-only]) button {
+    padding: 1px; /* Adjust padding for stroke */
   }
 `;

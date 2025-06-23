@@ -11,6 +11,7 @@ import { fn } from '@storybook/test';
 
 const template = html<StoryArgs>`<figma-button
   appearance="${(x) => x.appearance}"
+  size="${(x) => x.size}"
   ?disabled="${(x) => x.disabled}"
   ?icon-only="${(x) => x.iconOnly}"
   @click="${(x, c) => x.onClick(c.event)}"
@@ -40,7 +41,11 @@ export default {
     disabled: { control: 'boolean' },
     appearance: {
       control: 'radio',
-      options: ['primary', 'secondary'],
+      options: ['primary', 'secondary', 'subtle'],
+    },
+    size: {
+      control: 'radio',
+      options: ['medium', 'small'],
     },
     iconOnly: { control: 'boolean' },
   },
@@ -56,6 +61,18 @@ export const Default: Story = {};
 export const Primary: Story = {
   args: {
     appearance: 'primary',
+  },
+};
+
+export const Subtle: Story = {
+  args: {
+    appearance: 'subtle',
+  },
+};
+
+export const Small: Story = {
+  args: {
+    size: 'small',
   },
 };
 
