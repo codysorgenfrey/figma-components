@@ -30,6 +30,7 @@ export const styles = css`
   :host([appearance='primary']) button {
     background: var(--figma-color-bg-brand);
     color: var(--figma-color-text-onbrand);
+    border-color: transparent;
 
     &:hover {
       background: var(--figma-color-bg-brand-hover);
@@ -52,5 +53,10 @@ export const styles = css`
     &:active {
       background: var(--figma-color-bg-disabled);
     }
+  }
+
+  :host([icon-only]) button {
+    line-height: 0;
+    padding: 5px; /* Adjust padding for stroke */
   }
 `;
